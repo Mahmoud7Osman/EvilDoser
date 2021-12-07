@@ -1,1 +1,6 @@
 #!/bin/bash
+source ui/colors
+
+cat ui/banner
+echo -e "[${green}OK$white] Under Development, Please Wait For This Version To Get Ready"
+
