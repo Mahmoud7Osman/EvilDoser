@@ -1,6 +1,6 @@
 #!/bin/bash
 source ui/colors
 
-cat ui/banner
-echo -e "[${green}OK$white] Under Development, Please Wait For This Version To Get Ready"
+cat ui/setup
+echo -e "[${green}OK$white] 2 Days And The Version 1.0 Will Come up With Standard Bot Production For Forming An Uncontrolled Botnet, C2 Isn't Presented in this version."
 
