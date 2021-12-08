@@ -10,8 +10,8 @@ That's Insane ?! Yes, Think Of it, Undetectable, Hardware Usage Under You Contro
 
 <h2>Setup And Usage</h2>
 <ol>
-  <li>bash setup.sh</li>
-  <li>./evildoser</li>
+  <li>bash setup</li>
+  <li>./evildo</li>
 </ol>
 
 <h2>Warning !!</h2>
