@@ -4,7 +4,7 @@
   <li>Multiform Infection Isn't Finished yet</li>
   <li>You Can only create a bot targetting a host, share it.</li>
 </ul>
-So, Things that i'll add in the next versions are C2, Intelligent Evasion Techniques if user detected the bot.
+So, Things that i'll add in the next versions are C2, Intelligent Evasion Techniques if user detected the bot, the multiform injection.
 
 <h2>What Is EvilDoser ?</h2>
 
