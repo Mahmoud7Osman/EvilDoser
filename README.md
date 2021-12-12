@@ -2,7 +2,7 @@
 <ul>
   <li>C2 Isn't Provided</li>
   <li>Multiform Infection Isn't Finished yet</li>
-  <li>You Can only create a bot targeting a host, share it.</li>
+  <li>You Can only create a bot targetting a host, share it.</li>
 </ul>
 So, Things that i'll add in the next versions are C2, Intelligent Evasion Techniques if user detected the bot.
 
