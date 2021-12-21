@@ -3,4 +3,8 @@ source ui/colors
 
 cat ui/setup
 echo -e "[${green}OK$white] 2 Days And The Version 1.0 Will Come up With Standard Bot Production For Forming An Uncontrolled Botnet, C2 Isn't Presented in this version."
-
+echo "Installing the Digle Engine Please Wait (More Info About Digle At https://github.com/Mahmoud7Osman/Digle)"
+rm engine -rif &> /dev/null
+git clone https://github.com/Mahmoud7Osman/Digle
+mv Digle engine &> /dev/null
+chmod +x prog/*
