@@ -14,7 +14,7 @@ It Works By Building A DDOS Bot (EXE For Windows, ELF or SH For Linux) That will
 
 By Sharing The Bot Publicly With Peoples, , Low Or Medium Resources Usage, And It's Undetectable By All The AV's (Antiviruses), You Successfully Created a Strong Botnet, That will Continue DDOSing The Target Until it Die.
 
-That's Insane ?! Yes, Think Of it, Undetectable, Hardware Usage Under You Control, Yes This Project Provide a Huge Power.
+That's Insane ?! Yes, Think Of it, Undetectable, Hardware Usage Under Your Control, Yes This Project Provide a Huge Power.
 
 <h2>Setup And Usage</h2>
 <ol>
