@@ -5,7 +5,8 @@
   <li>You Can only create a bot targetting a host, share it.</li>
 </ul>
 So, Things that i'll add in the next versions are C2, Intelligent Evasion Techniques if user detected the bot, the multiform infection.
-
+<h3> Important <!> </h3>
+<p>This Project is Developed Using The CVenom Malware Development Kit Or MDK, And MDK is Currently Under Development And Testing, Nevertheless, This Project is Suspended Until I Add More Functionality To the Malware Development Kit<p>
 <h2>What Is EvilDoser ?</h2>
 
 EvilDoser is a Software Dedicated For Building Distributed Denial Of Service Bots (DDOS), Attacking Network Applications Such As Web Applications, Services, Even Someone's PC By Targetting Running Services on it (Or Just a UDP Flood), And So On..
