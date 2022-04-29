@@ -1,3 +1,4 @@
+# For Some Reasons, Development of this software has been stoped, support is end
 <h2>Version 1.0 (First Version) Information: </h2>
 <ul>
   <li>C2 Isn't Provided</li>
